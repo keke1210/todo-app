@@ -50,7 +50,7 @@ class ProjectController extends Controller
     public function markAsCompleted(Project $project)
     {
         $project->is_completed = true;
-        $project->update();
+        $project->delete();
 
         return response()->json('Project Updated');
     }
