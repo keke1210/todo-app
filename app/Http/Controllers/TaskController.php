@@ -22,6 +22,8 @@ class TaskController extends Controller
       public function markAsCompleted(Task $task)
       {
         $task->is_completed = true;
+        
+
         $task->delete();
 
         return response()->json('Task updated!');
